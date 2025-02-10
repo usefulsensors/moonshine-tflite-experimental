@@ -88,7 +88,7 @@ class MoonshineTFLiteModel(object):
         indices_x_attn = [name_dict[key] for key in self._sort_by_name(names_x_attn)]
 
         # Since outputs are interleaved, there is no clean way to auto map them,
-        # henice this horrible manual map.
+        # hence this horrible manual map.
         names_self_attn = [f'StatefulPartitionedCall_1:{d}' for d in self.decoder_layer_order]
         indices_self_attn = [name_dict[key] for key in names_self_attn]
 
